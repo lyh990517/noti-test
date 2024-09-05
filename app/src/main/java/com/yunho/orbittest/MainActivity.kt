@@ -12,7 +12,6 @@ import com.yunho.orbittest.ui.theme.OrbitTestTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setFlag()
         enableEdgeToEdge()
         setContent {
             val viewModel = remember { OrbitViewModel() }
@@ -20,15 +19,5 @@ class MainActivity : ComponentActivity() {
                 TestScreen(viewModel)
             }
         }
-    }
-
-    private fun setFlag() {
-        val win = window
-        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
-        win.addFlags(
-            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                    or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-                    or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
-        )
     }
 }

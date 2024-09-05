@@ -26,7 +26,7 @@ class NotificationService(private val context: Context) {
             context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.createNotificationChannel(channel)
 
-        val intent = Intent(context, MainActivity::class.java).apply {
+        val intent = Intent(context, NotiTestActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
 
