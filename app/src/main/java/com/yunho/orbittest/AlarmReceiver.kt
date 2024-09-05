@@ -18,8 +18,6 @@ class AlarmReceiver : BroadcastReceiver() {
         startVibration(context)
 
         context.startForegroundService(Intent(context, MyForegroundService::class.java))
-        val notificationService = NotificationService(context)
-        notificationService.showCompletionNotification()
         releaseWakeLock()
     }
 

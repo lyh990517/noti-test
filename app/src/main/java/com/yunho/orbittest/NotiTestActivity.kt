@@ -24,9 +24,9 @@ class NotiTestActivity : ComponentActivity() {
     private fun setFlag() {
         val win = window
         win.addFlags(
-            WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED or  // 잠금화면 위에 표시
-                    WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD or  // 잠금화면 해제
-                    WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON or    // 화면 유지
+            WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED or
+                    WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD or
+                    WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON or
                     WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
         )
     }
